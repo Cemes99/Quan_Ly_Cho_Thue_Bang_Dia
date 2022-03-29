@@ -52,6 +52,7 @@
     <Compile Include="BillManagement.Designer.cs">
       <DependentUpon>BillManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controller\BillManagementController.cs" />
     <Compile Include="Controller\DiskManagementController.cs" />
     <Compile Include="Controller\HomeController.cs" />
     <Compile Include="Controller\LoginController.cs" />

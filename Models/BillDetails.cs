@@ -8,20 +8,22 @@ namespace Project.Models
 {
     class BillDetails
     {
-        private DiskModel disk;
+        private string diskId;
         private int date;
-        private double price;
+        private int price;
+        private int amount;
 
-        public int Date { get => date; set => date = value; }
-        public double Price { get => price; set => price = value; }
-        internal DiskModel Disk { get => disk; set => disk = value; }
-
-        public BillDetails(DiskModel disk, int date, double price)
+        public BillDetails(string diskId, int date, int price, int amount)
         {
-            this.disk = disk;
+            this.diskId = diskId;
             this.date = date;
             this.price = price;
+            this.amount = amount;
         }
 
+        public string DiskId { get => diskId; set => diskId = value; }
+        public int Date { get => date; set => date = value; }
+        public int Price { get => price; set => price = value; }
+        public int Amount { get => amount; set => amount = value; }
     }
 }

@@ -22,7 +22,7 @@ namespace Project.Controller
 
             foreach (MemberModel item in Db.listMember)
             {
-                var values = new object[6];
+                var values = new object[5];
                 values[0] = item.Id;
                 values[1] = item.Name;
                 values[2] = item.PhoneNumber;

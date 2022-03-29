@@ -23,37 +23,37 @@ class Db
 
     public static List<DiskModel> listDisk = new List<DiskModel>()
     {
-        new DiskModel("disk1", "Disk No 1", "Cate 1", "Chưa sử dụng", "Cty A", "Ghi chu"),
-        new DiskModel("disk2", "Disk", "Cate 1", "Đã hỏng", "Cty A", "Ghi chu"),
+        new DiskModel("disk1", "Disk No 1", "Cate 1", "Đang được thuê", "Cty A", "Ghi chu"),
+        new DiskModel("disk2", "Disk", "Cate 1", "Chưa sử dụng", "Cty A", "Ghi chu"),
         new DiskModel("disk3", "Disk 3", "Cate 2", "Chưa sử dụng", "Cty A", "Ghi chu"),
         new DiskModel("disk4", "Disk 4", "Cate 2", "Đang được thuê", "Cty A", "Khách thuê Hanh"),
-        new DiskModel("disk5", "Disk No 5", "Cate 3", "Chưa sử dụng", "Cty A", "Ghi chú này rất dài nên nội dung sẽ được hiển thị trên nhiều dòng nếu chương trình chạy đúng"),
-        new DiskModel("disk6", "Disk 6", "Cate 1", "Đã hỏng", "Cty B", "Ghi chu"),
+        new DiskModel("disk5", "Disk No 5", "Cate 3", "Đang được thuê", "Cty A", "Ghi chú này rất dài nên nội dung sẽ được hiển thị trên nhiều dòng nếu chương trình chạy đúng"),
+        new DiskModel("disk6", "Disk 6", "Cate 1", "Chưa sử dụng", "Cty B", "Ghi chu"),
         new DiskModel("disk7", "Disk 7", "Cate 3", "Chưa sử dụng", "Cty B", "Ghi chu"),
-        new DiskModel("disk8", "Disk Number 8", "Cate 2", "Chưa sử dụng", "Cty B", ""),
+        new DiskModel("disk8", "Disk Number 8", "Cate 2", "Đang được thuê", "Cty B", ""),
     };
 
     public static List<BillModel> listBill = new List<BillModel>()
     {
         new BillModel("bill1", new DateTime(2021, 01, 25) ,"mem1", new List<BillDetails>(){
-            new BillDetails(listDisk[0], 30, 100000),
-            new BillDetails(listDisk[4], 45, 100000),
-            new BillDetails(listDisk[7], 15, 50000),
+            new BillDetails("disk1", 30, 100000, 2),
+            new BillDetails("disk4", 45, 100000, 4),
+            new BillDetails("disk8", 15, 50000, 1),
         }),
         new BillModel("bill2", new DateTime(2022, 01, 25) ,"mem1", new List<BillDetails>(){
-            new BillDetails(listDisk[0], 30, 100000),
-            new BillDetails(listDisk[4], 45, 100000),
-            new BillDetails(listDisk[7], 15, 50000),
+            new BillDetails("disk1", 30, 100000, 1),
+            new BillDetails("disk5", 45, 100000, 2),
+            new BillDetails("disk8", 15, 50000, 5),
         }),
         new BillModel("bill3", new DateTime(2022, 03, 30) ,"mem2", new List<BillDetails>(){
-            new BillDetails(listDisk[0], 30, 100000),
-            new BillDetails(listDisk[4], 45, 100000),
-            new BillDetails(listDisk[7], 15, 50000),
+            new BillDetails("disk1", 30, 100000, 7),
+            new BillDetails("disk5", 45, 100000, 8),
+            new BillDetails("disk8", 15, 50000, 6),
         }),
         new BillModel("bill4", new DateTime(2022, 01, 25) ,"mem3", new List<BillDetails>(){
-            new BillDetails(listDisk[0], 30, 100000),
-            new BillDetails(listDisk[4], 45, 100000),
-            new BillDetails(listDisk[7], 15, 50000),
+            new BillDetails("disk1", 30, 100000, 1),
+            new BillDetails("disk5", 45, 100000, 1),
+            new BillDetails("disk8", 15, 50000, 1),
         }),
                                        
     };

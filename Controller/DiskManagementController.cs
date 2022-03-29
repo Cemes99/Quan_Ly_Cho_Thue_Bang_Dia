@@ -21,8 +21,6 @@ namespace Project.Controller
             dt.Columns.Add("Company");
             dt.Columns.Add("Note");
 
-
-
             foreach(DiskModel item in Db.listDisk)
             {
                 var values = new object[6];

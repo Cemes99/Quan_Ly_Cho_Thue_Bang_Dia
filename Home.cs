@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Project.global;
 
@@ -26,12 +19,14 @@ namespace Project
 
         private void toMember_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            new MemberManagerment().Show();
         }
 
         private void toBill_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            new BillManagement().Show();
         }
 
         private void logout_Click(object sender, EventArgs e)

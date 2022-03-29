@@ -1,12 +1,5 @@
 ﻿using Project.Controller;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Project
@@ -24,7 +17,7 @@ namespace Project
 
         private void addMember_Click(object sender, EventArgs e)
         {
-            var values = new object[6];
+            var values = new object[5];
             values[0] = idField.Text;
             values[1] = nameField.Text;
             values[2] = phoneNumberField.Text;
@@ -48,7 +41,6 @@ namespace Project
         {
             index = table.CurrentCell.RowIndex;
             table.Rows.RemoveAt(index);
-            table.Refresh();
         }
 
         private void table_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -58,6 +50,12 @@ namespace Project
             phoneNumberField.Text = table.Rows[e.RowIndex].Cells[2].Value.ToString();
             idCardField.Text = table.Rows[e.RowIndex].Cells[3].Value.ToString();
             addressField.Text = table.Rows[e.RowIndex].Cells[4].Value.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new Home().Show();
         }
     }
 }

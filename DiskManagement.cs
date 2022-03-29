@@ -43,7 +43,6 @@ namespace Project
         {
             index = table.CurrentCell.RowIndex;
             table.Rows.RemoveAt(index);
-            table.Refresh();
         }
 
         private void table_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -56,5 +55,10 @@ namespace Project
             noteField.Text = table.Rows[e.RowIndex].Cells[5].Value.ToString();
         }
 
+        private void toHome_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new Home().Show();
+        }
     }
 }

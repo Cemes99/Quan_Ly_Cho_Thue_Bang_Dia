@@ -43,6 +43,7 @@ namespace Project
             this.addMember = new System.Windows.Forms.Button();
             this.table = new System.Windows.Forms.DataGridView();
             this.idCardField = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,10 +154,13 @@ namespace Project
             // table
             // 
             this.table.ColumnHeadersHeight = 29;
+            this.table.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.table.Location = new System.Drawing.Point(0, 240);
+            this.table.MultiSelect = false;
             this.table.Name = "table";
             this.table.RowHeadersWidth = 51;
             this.table.RowTemplate.Height = 24;
+            this.table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.table.Size = new System.Drawing.Size(800, 206);
             this.table.TabIndex = 17;
             this.table.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellClick);
@@ -168,11 +172,22 @@ namespace Project
             this.idCardField.Size = new System.Drawing.Size(200, 22);
             this.idCardField.TabIndex = 33;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(42, 150);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 30);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Quay lại";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MemberManagerment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.idCardField);
             this.Controls.Add(this.idField);
             this.Controls.Add(this.label5);
@@ -211,5 +226,6 @@ namespace Project
         private System.Windows.Forms.Button addMember;
         private System.Windows.Forms.DataGridView table;
         private System.Windows.Forms.TextBox idCardField;
+        private System.Windows.Forms.Button button1;
     }
 }

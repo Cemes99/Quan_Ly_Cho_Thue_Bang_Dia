@@ -45,17 +45,18 @@ namespace Project
             this.noteField = new System.Windows.Forms.TextBox();
             this.idField = new System.Windows.Forms.TextBox();
             this.statusField = new System.Windows.Forms.TextBox();
+            this.toHome = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataTable
+            // table
             // 
             this.table.ColumnHeadersHeight = 29;
             this.table.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.table.EnableHeadersVisualStyles = false;
             this.table.Location = new System.Drawing.Point(0, 244);
             this.table.MultiSelect = false;
-            this.table.Name = "dataTable";
+            this.table.Name = "table";
             this.table.RowHeadersWidth = 51;
             this.table.RowTemplate.Height = 24;
             this.table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -190,11 +191,22 @@ namespace Project
             this.statusField.Size = new System.Drawing.Size(150, 22);
             this.statusField.TabIndex = 17;
             // 
+            // toHome
+            // 
+            this.toHome.Location = new System.Drawing.Point(42, 151);
+            this.toHome.Name = "toHome";
+            this.toHome.Size = new System.Drawing.Size(125, 30);
+            this.toHome.TabIndex = 18;
+            this.toHome.Text = "Quay lại";
+            this.toHome.UseVisualStyleBackColor = true;
+            this.toHome.Click += new System.EventHandler(this.toHome_Click);
+            // 
             // DiskManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.toHome);
             this.Controls.Add(this.statusField);
             this.Controls.Add(this.idField);
             this.Controls.Add(this.noteField);
@@ -237,5 +249,6 @@ namespace Project
         private System.Windows.Forms.TextBox noteField;
         private System.Windows.Forms.TextBox idField;
         private System.Windows.Forms.TextBox statusField;
+        private System.Windows.Forms.Button toHome;
     }
 }
