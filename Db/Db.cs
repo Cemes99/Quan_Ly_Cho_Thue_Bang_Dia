@@ -39,22 +39,22 @@ class Db
             new BillDetails("disk1", 30, 100000, 2),
             new BillDetails("disk4", 45, 100000, 4),
             new BillDetails("disk8", 15, 50000, 1),
-        }),
-        new BillModel("bill2", new DateTime(2022, 01, 25) ,"mem1", new List<BillDetails>(){
+        }, BillModel.BillStatus.done),
+        new BillModel("bill2", new DateTime(2022, 03, 25) ,"mem1", new List<BillDetails>(){
             new BillDetails("disk1", 30, 100000, 1),
             new BillDetails("disk5", 45, 100000, 2),
             new BillDetails("disk8", 15, 50000, 5),
-        }),
+        }, BillModel.BillStatus.process),
         new BillModel("bill3", new DateTime(2022, 03, 30) ,"mem2", new List<BillDetails>(){
             new BillDetails("disk1", 30, 100000, 7),
             new BillDetails("disk5", 45, 100000, 8),
             new BillDetails("disk8", 15, 50000, 6),
-        }),
+        }, BillModel.BillStatus.process),
         new BillModel("bill4", new DateTime(2022, 01, 25) ,"mem3", new List<BillDetails>(){
             new BillDetails("disk1", 30, 100000, 1),
             new BillDetails("disk5", 45, 100000, 1),
             new BillDetails("disk8", 15, 50000, 1),
-        }),
+        }, BillModel.BillStatus.expired),
                                        
     };
 }

@@ -43,6 +43,19 @@ namespace Project.Controller
             }
         }
 
+        public bool createBill(string memId)
+        {
+            foreach(BillModel item in Db.listBill)
+            {
+                if(item.MemberId == memId)
+                {
+                    if (item.Status == BillModel.BillStatus.expired) return false;
+                }
+            }
+
+            return true;
+        }
+
         public void search(string text)
         {
             dt.Clear();
@@ -70,6 +83,27 @@ namespace Project.Controller
 
                 dt.Rows.Add(values);
             }
+        }
+
+        public string makePayment(int index)
+        {
+            string content = "";
+            int money = 0;
+            int more = 0;
+
+            foreach (BillDetails item in Db.listBill[index].ListDetail)
+            {
+                money += item.Price * item.Amount;
+            }
+
+            if (Db.listBill[index].Status == BillModel.BillStatus.expired)
+            {
+                more = money / 2;
+            }
+
+            content = "Giá phiếu thuê: " + money + "\nTiền phạt trễ hạn: " + more;
+
+            return content;
         }
 
         List<BillDetails> translate(string diskId, string date, string price, string amount)
