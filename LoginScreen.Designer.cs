@@ -1,7 +1,7 @@
 ﻿
 namespace Project
 {
-    partial class Login
+    partial class LoginScreen
     {
         /// <summary>
         /// Required designer variable.

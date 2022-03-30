@@ -33,7 +33,7 @@ namespace Project
         {
             this.Close();
             Global.currentUser = "";
-            new Login().Show();
+            new LoginScreen().Show();
         }
     }
 }
